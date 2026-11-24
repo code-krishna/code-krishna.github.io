@@ -1,0 +1,23 @@
+title: Vamsi Krishna Pendyala
+tagline: Ph.D. Student, Computer Science · Arizona State University
+description: >-
+  AI/ML engineering and research for modeling, simulation, and system-level
+  optimization: generative AI, time series, scalable discrete event simulation,
+  and model quantization for efficient on-device inference.
+url: "https://code-krishna.github.io"
+baseurl: ""
+
+author:
+  name: Vamsi Krishna Pendyala
+  email: vpendya2@asu.edu
+  github: code-krishna
+  linkedin: vamsi-krishna-pendyala-17033a188
+  scholar: "https://scholar.google.com/citations?user=feWkEXEAAAAJ&hl=en"
+  location: Tempe, Arizona
+
+markdown: kramdown
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

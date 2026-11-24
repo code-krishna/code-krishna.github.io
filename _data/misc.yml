@@ -1,0 +1,28 @@
+education:
+  - school: Arizona State University
+    degree: Ph.D., Computer Science
+    detail: "GPA 3.85/4.00"
+    dates: 2022 – 2026 (expected)
+    logo: asu.png
+  - school: National Institute of Technology – Agartala
+    degree: B.Tech., Computer Science and Engineering
+    detail: "CGPA 8.49/10"
+    dates: 2015 – 2019
+    logo: nit-agartala.png
+
+awards:
+  - title: Inaugural Best DEVS Student Award
+    year: 2025
+    detail: Winter Simulation Conference 2025 (ACM)
+    url: "https://acims.asu.edu/journal-conference-and-workshop-articles"
+  - title: Research Funding
+    detail: Intel Corporation, Chandler, Arizona
+  - title: Winner, IICDC-2017
+    year: 2017
+    detail: Texas Instruments & DST India, for a color-sensor based locking system
+
+hobbies:
+  - { icon: "🎮", name: Video games }
+  - { icon: "🥁", name: Playing drums }
+  - { icon: "🏃", name: Running }
+  - { icon: "🎬", name: Movies and TV series }

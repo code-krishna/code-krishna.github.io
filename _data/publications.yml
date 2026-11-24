@@ -1,0 +1,50 @@
+- title: "A Temporal Convolutional Network with Multi-Head Attention Model: A Surrogate for Parallel DEVS Semiconductor Fab Simulation"
+  abbr: arXiv 2026
+  authors: "Vamsi Krishna Pendyala, Hessam S. Sarjoughian, Edward J. Yellig, Bharadhwaj Balasubramaniam"
+  venue: arXiv
+  year: 2026
+  thumb: tcna-architecture.jpg
+  links:
+    - { label: arXiv, url: "https://arxiv.org/abs/2611.20493" }
+  bibtex: |-
+    @misc{pendyala2026tcna,
+      title={A Temporal Convolutional Network with Multi-Head Attention Model: A Surrogate for Parallel DEVS Semiconductor Fab Simulation},
+      author={Pendyala, Vamsi Krishna and Sarjoughian, Hessam S. and Yellig, Edward J. and Balasubramaniam, Bharadhwaj},
+      year={2026},
+      eprint={2611.20493},
+      archivePrefix={arXiv}
+    }
+
+- title: "Temporal Diffusion Models From Parallel DEVS Models: A Generative-AI Approach for Semiconductor Fabrication Manufacturing Systems"
+  abbr: WSC 2025
+  venue: Winter Simulation Conference (WSC)
+  year: 2025
+  note: Seattle, USA
+  thumb: diffusion-training.jpg
+  links:
+    - { label: IEEE Xplore, url: "https://ieeexplore.ieee.org/abstract/document/11338935" }
+
+- title: "Time Series Dataset for Semiconductor Manufacturing Using Discrete Event Simulations: MiniFab Model"
+  abbr: arXiv 2024
+  venue: arXiv
+  year: 2024
+  thumb: cascade-throughput-stages.jpg
+  links:
+    - { label: arXiv, url: "https://arxiv.org/html/2408.09307v1" }
+
+- title: "Generating TCN Models From Parallel DEVS Models: Semiconductor Manufacturing Systems"
+  abbr: WSC 2024
+  venue: Winter Simulation Conference (WSC)
+  year: 2024
+  note: Florida, USA
+  thumb: tcn-throughput-comparison.jpg
+  links:
+    - { label: IEEE Xplore, url: "https://ieeexplore.ieee.org/document/10838759" }
+
+- title: "Validation of Facts Against Textual Sources"
+  abbr: RANLP 2019
+  venue: Recent Advances in Natural Language Processing (RANLP)
+  year: 2019
+  note: Varna, Bulgaria
+  links:
+    - { label: ACL Anthology, url: "https://aclanthology.org/R19-1104/" }

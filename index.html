@@ -1,0 +1,131 @@
+---
+layout: default
+---
+{% assign a = site.author %}
+{% assign img = '/assets/img/research/' | relative_url %}
+{% assign logos = '/assets/img/logos/' | relative_url %}
+
+<!-- ABOUT -->
+<section id="about">
+  <h1 class="name"><strong>Vamsi Krishna</strong> Pendyala</h1>
+  <p class="affil">Ph.D. Student, Computer Science · Arizona State University</p>
+
+  <div class="profile">
+    <img src="{{ '/assets/img/headshot.jpg' | relative_url }}" alt="Portrait of {{ a.name }}">
+    <p class="profile-addr">School of Computing and Augmented Intelligence<br>Arizona State University, Tempe, AZ</p>
+  </div>
+
+  <div class="bio">
+    <p>I am a Ph.D. student in Computer Science at Arizona State University, working in the <a href="https://acims.asu.edu/" target="_blank" rel="noopener">Arizona Center for Integrative Modeling and Simulation (ACIMS)</a> with Dr. Hessam Sarjoughian, in collaboration with Intel Corporation, Chandler, AZ. I work at the intersection of machine learning and modeling and simulation.</p>
+    <p>Discrete-event simulation models of semiconductor factories are accurate but slow at scale. My research builds a hybrid framework in which learned models approximate Parallel DEVS (PDEVS) models at increasing levels of abstraction:</p>
+    <ol class="areas">
+      <li><strong>Output trajectories:</strong> Forecasting factory throughput and turnaround time with temporal models (TCN, TCNA).</li>
+      <li><strong>Trajectory generation:</strong> Generating complete trajectories from a factory configuration with conditional temporal diffusion.</li>
+      <li><strong>Component behavior:</strong> Learning the input/output events of individual factory components, so learned models can run inside the simulation.</li>
+    </ol>
+    <p>Each model is judged with a multi-model, multi-metric evaluation, from point accuracy to event timing and semantics. Previously I interned at Qualcomm Research (benchmarking and quantized on-device generative models) and Intel (agentic AI tools for GPU simulation), and worked as a software engineer at Lemnisk and Epsilon.</p>
+    <p class="links">
+      <a href="mailto:{{ a.email }}">Email</a> ·
+      <a href="{{ '/assets/cv.pdf' | relative_url }}" target="_blank" rel="noopener">CV</a> ·
+      <a href="{{ a.scholar }}" target="_blank" rel="noopener">Google Scholar</a> ·
+      <a href="https://github.com/{{ a.github }}" target="_blank" rel="noopener">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/{{ a.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research">
+  <h2>Research</h2>
+  <p>How can learned models approximate PDEVS models of semiconductor factories, at which levels of abstraction, with what measurable fidelity, and how can they be combined with PDEVS models into a hybrid simulation that is both faster and trustworthy?</p>
+  <figure class="zoom overview"><img src="{{ img }}framework.jpg" alt="Research framework: PDEVS MiniFab, four levels of learned approximation, multi-model multi-metric evaluation, and hybrid PDEVS–ML simulation"><figcaption>Research framework: Learned approximations of the PDEVS MiniFab at four levels of abstraction, evaluated with multi-model, multi-metric measures and combined into a hybrid PDEVS–ML simulation.</figcaption></figure>
+  {% for r in site.data.research %}
+  <div class="thread">
+    <p><span class="level">{{ r.level }}</span> <strong>{{ r.title }}.</strong> {{ r.summary }}</p>
+    {% if r.images.size > 0 %}
+    <div class="strip">
+      {% for im in r.images %}
+      <figure class="zoom"><img src="{{ img }}{{ im.src }}" alt="{{ im.caption }}" title="{{ im.caption }}" loading="lazy"><figcaption>{{ im.caption }}</figcaption></figure>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <h2>Publications</h2>
+  <ol class="pubs">
+    {% for p in site.data.publications %}
+    <li class="pub">
+      <div class="pub-left">
+        <span class="abbr">{{ p.abbr }}</span>
+        {% if p.thumb %}<img class="zoom-img" src="{{ img }}{{ p.thumb }}" alt="Figure from {{ p.title }}" loading="lazy">{% endif %}
+      </div>
+      <div class="pub-right">
+        <div class="pub-title">{{ p.title }}</div>
+        {% if p.authors %}<div class="pub-authors">{{ p.authors | replace: 'Vamsi Krishna Pendyala', '<em class="me">Vamsi Krishna Pendyala</em>' }}</div>{% endif %}
+        <div class="pub-venue"><em>{{ p.venue }}</em>, {{ p.year }}{% if p.note %}, {{ p.note }}{% endif %}</div>
+        <div class="pub-links">
+          {% for l in p.links %}<a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>{% endfor %}
+          {% if p.bibtex %}<button class="bib-toggle">Bib</button>{% endif %}
+        </div>
+        {% if p.bibtex %}<pre class="bib" hidden>{{ p.bibtex | escape }}</pre>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <h2>Experience</h2>
+  <ul class="rows">
+    {% for e in site.data.experience %}
+    <li class="row">
+      <img class="logo" src="{{ logos }}{{ e.logo }}" alt="{{ e.org }} logo">
+      <div class="row-body">
+        <div class="org-line">{{ e.org }} <span class="muted">· {{ e.location }}</span></div>
+        {% for r in e.roles %}
+        <div class="role">
+          <div class="row-head"><strong>{{ r.title }}</strong><span class="when">{{ r.dates }}</span></div>
+          <ul class="pts">{% for b in r.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
+        </div>
+        {% endfor %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <h2>Education</h2>
+  <ul class="rows">
+    {% for ed in site.data.misc.education %}
+    <li class="row">
+      <img class="logo" src="{{ logos }}{{ ed.logo }}" alt="{{ ed.school }} logo">
+      <div class="row-body">
+        <div class="row-head"><span><strong>{{ ed.degree }}</strong>, {{ ed.school }} · {{ ed.detail }}</span><span class="when">{{ ed.dates }}</span></div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<!-- HONORS -->
+<section id="honors">
+  <h2>Honors &amp; Awards</h2>
+  <ul class="honors">
+    {% for w in site.data.misc.awards %}
+    <li><span class="when">{{ w.year }}</span><span>{% if w.url %}<a href="{{ w.url }}" target="_blank" rel="noopener"><strong>{{ w.title }}</strong></a>{% else %}<strong>{{ w.title }}</strong>{% endif %}, {{ w.detail }}</span></li>
+    {% endfor %}
+  </ul>
+</section>
+
+<!-- HOBBIES -->
+<section id="hobbies">
+  <h2>Outside Research</h2>
+  <p class="hobbies">{% for h in site.data.misc.hobbies %}<span>{{ h.icon }} {{ h.name }}</span>{% endfor %}</p>
+</section>

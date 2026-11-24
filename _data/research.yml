@@ -1,0 +1,68 @@
+# Research threads, ordered by level of abstraction (from the Ph.D. prospectus).
+- title: Benchmark data from PDEVS simulations of Intel's MiniFab
+  level: Foundation
+  summary: >-
+    Parallel DEVS models of the Intel MiniFab (diffusion, implantation, and lithography
+    machines with re-entrant flows), scaled to 8-stage pipeline and cascade factories.
+    A single run of the 8-stage cascade takes from about 100 seconds to over 1,000 seconds
+    depending on lot size. Runs are converted into an open time-series benchmark of
+    throughput and turnaround-time trajectories.
+  images:
+    - { src: minifab-single-stage.jpg, caption: "Single-stage MiniFab with transducers" }
+    - { src: minifab-8stage.jpg, caption: "Eight-stage cascade MiniFab and its experimental frame" }
+    - { src: cascade-throughput-stages.jpg, caption: "Stage-wise throughput of the 8-stage cascade" }
+    - { src: pipeline-th-ta.jpg, caption: "Throughput and turnaround profiles of the 8-stage pipeline" }
+
+- title: TCN surrogates for single- and multi-stage factories
+  level: L1 · Output trajectories
+  summary: >-
+    Temporal Convolutional Networks forecast throughput and turnaround time from simulated
+    trajectories, outperforming ARIMA, RNN, and LSTM baselines and running 48 to 434 times
+    faster than the simulation.
+  images:
+    - { src: tcn-throughput-comparison.jpg, caption: "TCN vs. ARIMA, RNN, and LSTM throughput forecasts" }
+    - { src: tcn-lotsize-r2.jpg, caption: "R² across models trained on small, medium, and large lots" }
+
+- title: TCNA and multi-model, multi-metric forecasting
+  level: L1 · Output trajectories
+  summary: >-
+    A TCN with multi-head attention (TCNA) that conditions on static factory covariates,
+    compared with six other deep forecasters (LSTM, TFT, Autoformer, FEDformer, N-BEATSx, TCN)
+    on 144 simulation runs under 20 accuracy measures. The preferred model changes with the
+    target, the error measure, and whether trajectories are represented by events or by fixed
+    time steps, and accuracy does not follow model size.
+  images:
+    - { src: tcna-architecture.jpg, caption: "TCNA architecture" }
+    - { src: tcna-forecast-trajectory.jpg, caption: "Event-indexed throughput forecasts vs. PDEVS ground truth" }
+    - { src: tcna-mape-spider.jpg, caption: "MAPE across factory settings" }
+    - { src: tcna-efficiency.jpg, caption: "Memory vs. parameter count across forecasters" }
+
+- title: Conditional Temporal Diffusion (CTD)
+  level: L2 · Trajectory generation
+  summary: >-
+    Diffusion models that generate complete throughput and turnaround-time trajectories
+    from noise, conditioned only on the factory configuration, about three orders of
+    magnitude faster than simulation.
+  images:
+    - { src: diffusion-training.jpg, caption: "Forward diffusion and denoise training conditioned on static covariates" }
+    - { src: diffusion-generation.jpg, caption: "Reverse denoising: generating a trajectory from noise" }
+    - { src: diffusion-throughput.jpg, caption: "Generated vs. PDEVS throughput" }
+    - { src: diffusion-cross-process.jpg, caption: "Cross-process accuracy for models trained on different lot sizes" }
+
+- title: LLMs for component I/O and executable models
+  level: L3 · Component I/O
+  summary: >-
+    Instruction-prompted LLMs reproduce the input/output event trajectory of the implantation
+    component and generate approximate PDEVS atomic models that run in DEVS-Suite. Accurate,
+    but minutes of inference per trajectory make them too costly to run inside a simulation.
+  images:
+    - { src: llm-pdevs-framework.jpg, caption: "From PDEVS components to instructional prompts to an implantation LLM" }
+
+- title: "Ongoing: state-space neural surrogates in a hybrid PDEVS–ML MiniFab"
+  level: L3–L4 · Learned components
+  summary: >-
+    My dissertation work: a discrete-event representation of component I/O trajectories, a
+    state-space neural network that learns the I/O behavior of a MiniFab component, and a
+    hybrid simulation in which that network replaces the component inside the factory, assessed
+    for accuracy, error propagation, and speedup.
+  images: []

@@ -1,0 +1,70 @@
+- org: Arizona State University, School of Computing and Augmented Intelligence
+  logo: asu.png
+  location: Tempe, AZ
+  roles:
+    - title: Teaching Assistant
+      dates: Aug 2025 – May 2026, Aug 2026 – Present
+      bullets:
+        - "Teaching assistant to Dr. Hessam Sarjoughian for three courses:"
+        - "CSE 460 Software Analysis and Design: object-oriented and structured analysis and design, software architecture and design patterns."
+        - "CSE 564 Software Design (graduate): software design methods and representations, cyber-physical systems, and synchronous and asynchronous reactive components"
+        - "CSE 445 Distributed Software Development: distributed system architectures and design, service-oriented computing, and frameworks for building distributed applications and software components."
+        - Create and grade quizzes, assignments, and exams for classes of 100+ students, and support students during office hours.
+
+- org: Qualcomm Research
+  logo: qualcomm.svg
+  location: San Diego, CA
+  roles:
+    - title: AI Research Intern
+      dates: May 2026 – Aug 2026
+      bullets:
+        - Worked with Qualcomm Research on agentic AI benchmarking and evaluation.
+        - Developed a Large Vision Model (LVM) benchmarking framework that computes 13+ evaluation metrics (CLIP, HPSv2, VBench++, UniGenBench++) for text-to-image and text-to-video models.
+        - Integrated the framework with an on-device inference tool to evaluate LVM execution on device.
+        - Evaluated post-training quantized (PTQ) open-source text-to-image and text-to-video models, quantized with Qualcomm's open-source AIMET toolkit, against full-precision baselines.
+
+- org: Intel Corporation
+  logo: intel.svg
+  location: Folsom, CA
+  roles:
+    - title: Graduate Technical Intern (AI/ML)
+      dates: May 2025 – Aug 2025
+      bullets:
+        - Designed and implemented AI-driven toolkits with Intel's GPU team to automate and accelerate GPU simulation analysis, debugging, and codebase management.
+        - Built toolkits for GPU-simulation code analysis, hang detection, page-fault detection, and simulation-study code generation using MCP and RAG pipelines; filed a bug report for the internal AI framework.
+        - Cleaned up GPU simulation code by removing redundant pipeline features, and evaluated AI-based code cleanup solutions that reduced manual effort by 30%.
+
+- org: Arizona Center for Integrative Modeling and Simulation (ACIMS), Arizona State University
+  logo: acims.png
+  location: Tempe, AZ
+  roles:
+    - title: Research Associate (with Intel Corporation)
+      dates: Jan 2024 – May 2025
+      bullets:
+        - Built the PDEVS MiniFab benchmark, a time-series data set of throughput and turnaround-time trajectories from 8-stage pipeline and cascade factory simulations.
+        - Developed TCN surrogates that forecast factory performance 48 to 434 times faster than simulation, and Conditional Temporal Diffusion models that generate full trajectories about three orders of magnitude faster.
+        - Explored LLM-based prediction of component I/O behavior and generation of executable PDEVS models; overall, ML surrogates reduced execution time by 95.4%.
+    - title: Graduate Services Assistant
+      dates: Aug 2023 – Jan 2024
+      bullets:
+        - Worked under Dr. Hessam Sarjoughian on discrete event simulation of Intel's MiniFab and its scaling to pipeline, cascade, and multiserver workflows, analyzing throughput, turnaround time, idle/active time, and buffer sizes.
+
+- org: Immensitas – Lemnisk
+  logo: lemnisk.png
+  location: Bangalore, India
+  roles:
+    - title: Software Engineer 1
+      dates: Mar 2021 – Mar 2022
+      bullets:
+        - Developed and deployed REST APIs using Java Servlets, Spring Boot, and Spring.
+        - Enhanced JavaScript encryption/decryption logic, reducing response time by 20%, and automated SFTP file loading.
+
+- org: Epsilon – Conversant
+  logo: epsilon.png
+  location: Bangalore, India
+  roles:
+    - title: Software Engineer 1 (Data Platform)
+      dates: Jul 2019 – Mar 2021
+      bullets:
+        - Managed end-to-end data onboarding workflows with Python, Greenplum, and PostgreSQL, optimizing performance with stored procedures.
+        - Built a parallel batch-processing application that cut manual effort by 80% and earned a spotlight award.
