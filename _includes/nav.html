@@ -13,5 +13,20 @@
       <a href="{{ '/assets/cv.pdf' | relative_url }}" target="_blank" rel="noopener">CV</a>
       <a href="#contact">Contact</a>
     </nav>
+    <div class="nav-tools">
+      <button class="tool-btn" id="search-toggle" title="Search (⌘K)" aria-label="Search"><span class="kbd">⌘ k</span> <i class="ti ti-search"></i></button>
+      <button class="tool-btn" id="theme-toggle" title="Change theme" aria-label="Change theme"><i class="ti ti-sun-moon" id="theme-icon"></i></button>
+    </div>
   </div>
 </header>
+
+<div class="search-modal" id="search-modal" hidden>
+  <div class="search-box" role="dialog" aria-label="Search this site">
+    <div class="search-input-wrap">
+      <i class="ti ti-search"></i>
+      <input id="search-input" type="text" placeholder="Search sections, publications, experience…" autocomplete="off" spellcheck="false">
+      <kbd>esc</kbd>
+    </div>
+    <ul class="search-results" id="search-results"></ul>
+  </div>
+</div>
