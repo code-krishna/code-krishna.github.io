@@ -1,11 +1,11 @@
 /* Minimal dark academic theme (al-folio inspired) */
 :root{
-  --bg:#121212; --text:#e6e6e6; --muted:#9e9e9e; --line:#2c2c2c;
-  --accent:#2dd4bf; --code:#1c1c1c;
+  --bg:#1c1c1d; --text:#e8e8e8; --muted:#828282; --line:#424246;
+  --accent:#2698ba; --code:#2c3237;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:64px}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--bg);color:var(--text);font:300 17px/1.6 Roboto,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 img{max-width:100%;display:block}
@@ -13,19 +13,20 @@ img{max-width:100%;display:block}
 main.wrap{padding-top:28px;padding-bottom:40px}
 
 /* Nav */
-.nav{position:sticky;top:0;z-index:50;background:rgba(18,18,18,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{position:sticky;top:0;z-index:50;background:rgba(28,28,29,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:56px}
 .brand{color:var(--text);font-weight:300;font-size:1.05rem}
 .brand strong{font-weight:700}
 .brand:hover{text-decoration:none}
 .nav-links{display:flex;gap:22px}
-.nav-links a{color:var(--text);font-size:.95rem}
+.nav-links a{color:var(--text);font-size:1rem;font-weight:400}
+.nav-links a.active{color:var(--accent);font-weight:700}
 .nav-links a:hover{color:var(--accent);text-decoration:none}
 .menu-btn{display:none;background:none;border:none;color:var(--text);cursor:pointer}
 
 /* Sections */
 section{padding-top:8px;margin-bottom:34px}
-h2{font-size:1.45rem;font-weight:500;color:var(--accent);margin:0 0 14px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+h2{font-size:1.6rem;font-weight:400;color:var(--accent);margin:0 0 14px;padding-bottom:6px;border-bottom:1px solid var(--line)}
 section#about{padding-top:0;overflow:hidden}
 
 /* About */
@@ -54,14 +55,14 @@ figure.zoom figcaption{display:none}
 .pub{display:grid;grid-template-columns:170px 1fr;gap:18px;padding:12px 0;border-bottom:1px solid var(--line)}
 .pub:last-child{border-bottom:none}
 .pub-left{display:flex;flex-direction:column;gap:6px}
-.abbr{align-self:flex-start;background:var(--accent);color:#0b2d29;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:3px;min-width:70px;text-align:center}
+.abbr{align-self:stretch;background:var(--accent);color:#fff;font-size:.8rem;font-weight:700;padding:3px 8px;border-radius:4px;text-align:center}
 .pub-left img{width:100%;height:96px;object-fit:contain;background:#fff;border-radius:4px;padding:3px;cursor:zoom-in}
-.pub-title{font-weight:600;line-height:1.4}
+.pub-title{font-weight:500;font-size:1.05rem;line-height:1.4}
 .pub-authors{font-size:.92rem;color:var(--muted);margin-top:2px}
 .pub-authors .me{color:var(--text);font-style:normal;font-weight:600;text-decoration:underline;text-underline-offset:2px}
-.pub-venue{font-size:.92rem;color:var(--muted);margin-top:2px}
-.pub-links{display:flex;gap:8px;margin-top:8px}
-.pub-links a,.bib-toggle{font:inherit;font-size:.78rem;padding:1px 10px;border:1px solid var(--text);border-radius:3px;color:var(--text);background:none;cursor:pointer}
+.pub-venue{font-size:.92rem;color:var(--text);margin-top:2px}
+.pub-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.pub-links a,.bib-toggle{font:inherit;font-weight:400;font-size:.8rem;text-transform:uppercase;padding:.25rem 1rem;border:1px solid var(--text);border-radius:2px;color:var(--text);background:none;cursor:pointer}
 .pub-links a:hover,.bib-toggle:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
 .bib{background:var(--code);border:1px solid var(--line);border-radius:4px;padding:10px;font-size:.75rem;overflow-x:auto;margin:10px 0 0;white-space:pre}
 
@@ -116,3 +117,18 @@ figure.zoom.overview figcaption{display:block;font-size:.85rem;color:var(--muted
 .row{padding:12px 0;border-bottom:1px solid var(--line)}
 .rows .row:last-child{border-bottom:none}
 .hobbies{display:flex;flex-wrap:wrap;gap:8px 28px;margin:0}
+
+/* al-folio style tweaks */
+strong,b{font-weight:700}
+.bio{font-size:1rem}
+.affil a,.affil{font-weight:300}
+
+/* Contact */
+.social{text-align:center;margin-top:20px}
+.social h2{text-align:left}
+.contact-icons{font-size:3.5rem;display:flex;justify-content:center;gap:28px;margin:10px 0 6px}
+.contact-icons a{color:var(--text);transition:color .2s ease-in-out}
+.contact-icons a:hover{color:var(--accent);text-decoration:none}
+.contact-note{font-size:.9rem;margin:6px 0 0}
+.contact-note.muted{color:var(--muted);font-size:.8rem}
+@media (max-width:720px){.contact-icons{font-size:2.5rem;gap:18px}}

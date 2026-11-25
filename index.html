@@ -16,7 +16,7 @@ layout: default
   </div>
 
   <div class="bio">
-    <p>I am a Ph.D. student in Computer Science at Arizona State University, working in the <a href="https://acims.asu.edu/" target="_blank" rel="noopener">Arizona Center for Integrative Modeling and Simulation (ACIMS)</a> with Dr. Hessam Sarjoughian, in collaboration with Intel Corporation, Chandler, AZ. I work at the intersection of machine learning and modeling and simulation.</p>
+    <p>I am a Ph.D. candidate in Computer Science at Arizona State University, working in the <a href="https://acims.asu.edu/" target="_blank" rel="noopener">Arizona Center for Integrative Modeling and Simulation (ACIMS)</a> with Dr. Hessam Sarjoughian, in collaboration with Intel Corporation, Chandler, AZ. I work at the intersection of machine learning and modeling and simulation.</p>
     <p>Discrete-event simulation models of semiconductor factories are accurate but slow at scale. My research builds a hybrid framework in which learned models approximate Parallel DEVS (PDEVS) models at increasing levels of abstraction:</p>
     <ol class="areas">
       <li><strong>Output trajectories:</strong> Forecasting factory throughput and turnaround time with temporal models (TCN, TCNA).</li>
@@ -128,4 +128,18 @@ layout: default
 <section id="hobbies">
   <h2>Outside Research</h2>
   <p class="hobbies">{% for h in site.data.misc.hobbies %}<span>{{ h.icon }} {{ h.name }}</span>{% endfor %}</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="social">
+  <h2>Contact</h2>
+  <div class="contact-icons">
+    <a href="mailto:{{ a.email }}" title="Email"><i class="fa-solid fa-envelope"></i></a>
+    <a href="{{ a.scholar }}" title="Google Scholar" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i></a>
+    <a href="https://github.com/{{ a.github }}" title="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/{{ a.linkedin }}" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="{{ '/assets/cv.pdf' | relative_url }}" title="CV" target="_blank" rel="noopener"><i class="ai ai-cv"></i></a>
+  </div>
+  <p class="contact-note">If you'd like to reach out, please drop an email to: {{ a.email | replace: '@', '[at]' | replace: '.', '[dot]' }}</p>
+  <p class="contact-note muted">School of Computing and Augmented Intelligence · Arizona State University, Tempe, AZ</p>
 </section>

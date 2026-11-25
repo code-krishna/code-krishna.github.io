@@ -36,4 +36,16 @@
       pre.hidden = !pre.hidden;
     });
   });
+
+  // Highlight the nav link for the section in view
+  var navAs = Array.prototype.slice.call(links.querySelectorAll('a[href^="#"]'));
+  var secs = navAs.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+  function spy() {
+    var y = window.scrollY + 90, idx = 0;
+    secs.forEach(function (s, i) { if (s && s.offsetTop <= y) idx = i; });
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 2) idx = secs.length - 1;
+    navAs.forEach(function (a, i) { a.classList.toggle('active', i === idx); });
+  }
+  window.addEventListener('scroll', spy, { passive: true });
+  spy();
 })();
